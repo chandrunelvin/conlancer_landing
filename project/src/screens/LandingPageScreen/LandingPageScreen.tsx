@@ -57,7 +57,7 @@ export const LandingPageScreen = (): JSX.Element => {
 
       <div className="relative w-28 h-28 self-start ml-[353px] mt-[-5518px] rotate-[-15deg] hidden sm:block">
         <img
-          className="absolute w-[111px] h-[111px] top-1.5 left-2.5 rotate-[15deg]"
+          className="absolute w-[111px] h-[111px] top-[13rem] left-[-3rem] rotate-[15deg]"
           src="./up-arrow-icon.png"
           alt="Group"
         />

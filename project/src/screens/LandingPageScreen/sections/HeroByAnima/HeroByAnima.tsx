@@ -21,7 +21,7 @@ export const HeroByAnima = (): JSX.Element => {
               <div className="bg-gradient-to-b from-[#ffffff] to-[#4b4b4b] bg-clip-text text-transparent">
                 <img
                   className="p-3 sm:p-6 w-full max-w-[500px] md:max-w-none"
-                  src="./public/zero-commision.svg"
+                  src="./zero-commision.svg"
                   alt="ZERO COMMISION"
                 />
               </div>

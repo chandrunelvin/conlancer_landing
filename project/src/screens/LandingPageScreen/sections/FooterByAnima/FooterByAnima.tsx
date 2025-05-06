@@ -3,9 +3,21 @@ import { Button } from "../../../../components/ui/button";
 
 export const FooterByAnima = (): JSX.Element => {
   const socialLinks = [
-    { icon: "/icon-3.svg", alt: "Social media icon" },
-    { icon: "/icon.svg", alt: "Social media icon" },
-    { icon: "/icon-1.svg", alt: "Social media icon" },
+    {
+      icon: "/icon-3.svg",
+      alt: "Twitter icon",
+      url: "https://twitter.com/yourhandle",
+    },
+    {
+      icon: "/icon.svg",
+      alt: "LinkedIn icon",
+      url: "https://linkedin.com/company/yourcompany",
+    },
+    {
+      icon: "/icons8-instagram.svg",
+      alt: "Instagram icon",
+      url: "https://instagram.com/yourhandlehttps://www.instagram.com/conlancer?igsh=d3ZoNXM4am5tc2V1&utm_source=qr",
+    },
   ];
 
   return (
@@ -52,18 +64,25 @@ export const FooterByAnima = (): JSX.Element => {
 
         <div className="flex items-center gap-2.5">
           {socialLinks.map((link, index) => (
-            <Button
+            <a
               key={index}
-              variant="outline"
-              size="icon"
-              className="p-[10.58px] bg-[#1c1c21] rounded-[75.57px] border-none"
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
             >
-              <img
-                className="w-[15.11px] h-[15.11px]"
-                alt={link.alt}
-                src={link.icon}
-              />
-            </Button>
+              <Button
+                variant="outline"
+                size="icon"
+                className="p-[10.58px] bg-[#1c1c21] rounded-[75.57px] border-none"
+              >
+                <img
+                  className="w-[15.11px] h-[15.11px]"
+                  alt={link.alt}
+                  src={link.icon}
+                />
+              </Button>
+            </a>
           ))}
         </div>
       </div>

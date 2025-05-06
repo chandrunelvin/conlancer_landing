@@ -25,7 +25,7 @@ export const HeroByAnima = (): JSX.Element => {
                   alt="ZERO COMMISION"
                 />
               </div>
-              <h2 className="font-medium text-[28px] sm:text-[32px] md:text-4xl text-white leading-[35px] sm:leading-[40px] md:leading-[45px] [font-family:'Satoshi-Medium',Helvetica]">
+              <h2 className="font-medium text-[28px] sm:text-[32px] md:text-4xl text-white leading-[35px] sm:leading-[40px] md:leading-[45px] [font-family:'Satoshi-Medium',Helvetica] text-center mx-auto max-w-[80%]">
                 Freelance Platform Is Coming
               </h2>
             </div>
@@ -39,7 +39,7 @@ export const HeroByAnima = (): JSX.Element => {
 
           {/* Phone mockup */}
           <div className="absolute w-[280px] sm:w-[350px] md:w-[429px] h-[320px] sm:h-[400px] md:h-[488px] top-[350px] sm:top-[380px] md:top-[420px] left-1/2 -translate-x-1/2">
-            <div className="absolute w-[250px] sm:w-[300px] md:w-[330px] h-[320px] sm:h-[380px] md:h-[433px] top-0 left-1/2 -translate-x-1/2 overflow-hidden">
+            <div className="absolute w-[250px] sm:w-[300px] md:w-[330px] h-[260px] sm:h-[380px] md:h-[433px] top-0 left-1/2 -translate-x-1/2 overflow-hidden">
               <div className="h-[500px] sm:h-[570px] md:h-[670px]">
                 <div className="w-full h-full">
                   <div className="relative h-full">
@@ -56,10 +56,10 @@ export const HeroByAnima = (): JSX.Element => {
             </div>
 
             {/* Button shadow */}
-            <div className="absolute w-full h-10 sm:h-12 md:h-14 top-[260px] sm:top-[320px] md:top-[400px] left-0 bg-black blur-[8px] sm:blur-[10px] md:blur-[12.1px]" />
+            <div className="absolute w-full h-10 sm:h-12 md:h-14 top-[230px] sm:top-[320px] md:top-[400px] left-0 bg-black blur-[8px] sm:blur-[10px] md:blur-[12.1px]" />
 
             {/* Join waitlist button */}
-            <Button className="absolute w-[180px] sm:w-[200px] md:w-[223px] h-[45px] sm:h-[50px] md:h-[53px] bottom-[-25%] sm:top-[340px] md:top-[435px] left-1/2 -translate-x-1/2 bg-zinc-950 rounded-[10043px] font-bold text-[16px] sm:text-[18px] md:text-xl [font-family:'Satoshi-Bold',Helvetica]">
+            <Button className="absolute w-[180px] sm:w-[200px] md:w-[223px] h-[45px] sm:h-[50px] md:h-[53px] bottom-[0%] ls:bottom-[-25%] sm:top-[340px] md:top-[435px] left-1/2 -translate-x-1/2 bg-zinc-950 rounded-[10043px] font-bold text-[16px] sm:text-[18px] md:text-xl [font-family:'Satoshi-Bold',Helvetica]">
               Join the waitlist!
             </Button>
 

@@ -13,7 +13,7 @@ export const FooterByAnima = (): JSX.Element => {
       {/* Logo section */}
       <div className="flex flex-col w-full max-w-[1323px] items-start gap-2.5">
         <img
-          className="w-[382px] h-[74px] object-cover"
+          className="w-[382px] h-[74px]"
           src="./footer-logo.png"
           alt="Conlancer logo"
         />

@@ -77,7 +77,7 @@ export const FooterByAnima = (): JSX.Element => {
         this.y = Math.random() * canvas.height;
         this.baseSize = Math.random() * 1.9 + 0.5; // Smaller particles for footer
         this.size = this.baseSize;
-        this.speedX = Math.random() * 0.2 - 0.1; // Slower movement for footer
+        this.speedX = Math.random() * 0.4 - 0.2; // Slower movement for footer
         this.speedY = Math.random() * 0.2 - 0.1;
         this.density = Math.random() * 15 + 3; // Less density for weaker interaction
         this.color = `rgba(255, 255, 255, ${Math.random() * 0.2 + 0.05})`; // More transparent for footer

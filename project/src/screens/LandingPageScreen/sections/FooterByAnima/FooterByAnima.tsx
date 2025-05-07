@@ -75,7 +75,7 @@ export const FooterByAnima = (): JSX.Element => {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.baseSize = Math.random() * 0.8 + 0.3; // Smaller particles for footer
+        this.baseSize = Math.random() * 1.9 + 0.5; // Smaller particles for footer
         this.size = this.baseSize;
         this.speedX = Math.random() * 0.2 - 0.1; // Slower movement for footer
         this.speedY = Math.random() * 0.2 - 0.1;

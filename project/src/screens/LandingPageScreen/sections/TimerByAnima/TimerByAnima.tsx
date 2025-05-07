@@ -100,7 +100,7 @@ export const TimerByAnima = (): JSX.Element => {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.baseSize = Math.random() * 1 + 0.5; // Particles for timer section
+        this.baseSize = Math.random() * 1.3 + 0.7; // Particles for timer section
         this.size = this.baseSize;
         this.speedX = Math.random() * 0.25 - 0.125; // Movement speed for timer section
         this.speedY = Math.random() * 0.25 - 0.125;

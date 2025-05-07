@@ -59,7 +59,7 @@ export const LandingPageByAnima = (): JSX.Element => {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.baseSize = Math.random() * 1 + 0.5; // Slightly larger particles
+        this.baseSize = Math.random() * 1.4 + 0.6; // Slightly larger particles
         this.size = this.baseSize;
         this.speedX = Math.random() * 0.3 - 0.15; // Slightly faster movement
         this.speedY = Math.random() * 0.3 - 0.15;

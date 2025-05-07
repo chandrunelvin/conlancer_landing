@@ -1,8 +1,11 @@
 import { ChevronDown } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../../../components/ui/button";
+import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
 
-export const HeroByAnima = (): JSX.Element => {
+export const HeroByAnima = () => {
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
+
   return (
     <section className="relative w-full bg-black overflow-hidden">
       <div className="relative w-full min-h-[100vh] md:min-h-[800px] lg:min-h-[998px]">
@@ -59,7 +62,10 @@ export const HeroByAnima = (): JSX.Element => {
             <div className="absolute w-full h-10 sm:h-12 md:h-14 top-[230px] sm:top-[320px] md:top-[400px] left-0 bg-black blur-[8px] sm:blur-[10px] md:blur-[12.1px]" />
 
             {/* Join waitlist button */}
-            <Button className="absolute w-[180px] sm:w-[200px] md:w-[223px] h-[45px] sm:h-[50px] md:h-[53px] bottom-[0%] ls:bottom-[-25%] sm:top-[340px] md:top-[435px] left-1/2 -translate-x-1/2 bg-zinc-950 rounded-[10043px] font-bold text-[16px] sm:text-[18px] md:text-xl [font-family:'Satoshi-Bold',Helvetica]">
+            <Button
+              className="absolute w-[180px] sm:w-[200px] md:w-[223px] h-[45px] sm:h-[50px] md:h-[53px] bottom-[0%] ls:bottom-[-25%] sm:top-[340px] md:top-[435px] left-1/2 -translate-x-1/2 bg-zinc-950 rounded-[10043px] font-bold text-[16px] sm:text-[18px] md:text-xl [font-family:'Satoshi-Bold',Helvetica]"
+              onClick={() => setIsWaitlistOpen(true)}
+            >
               Join the waitlist!
             </Button>
 
@@ -81,6 +87,8 @@ export const HeroByAnima = (): JSX.Element => {
           </div>
         </div>
       </div>
+      {/* Waitlist Form */}
+      <WaitlistForm open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen} />
     </section>
   );
 };

@@ -7,13 +7,13 @@ export const FooterByAnima = (): JSX.Element => {
   const socialLinks = [
     {
       icon: "/icon-3.svg",
-      alt: "Twitter icon",
-      url: "https://twitter.com/yourhandle",
+      alt: "Facebook icon",
+      url: "https://www.facebook.com/share/1AfPX5ucUH/?mibextid=wwXIfr",
     },
     {
-      icon: "/icon.svg",
+      icon: "/icon-1.svg",
       alt: "LinkedIn icon",
-      url: "https://linkedin.com/company/yourcompany",
+      url: "https://www.linkedin.com/company/conlancer/",
     },
     {
       icon: "/icons8-instagram.svg",

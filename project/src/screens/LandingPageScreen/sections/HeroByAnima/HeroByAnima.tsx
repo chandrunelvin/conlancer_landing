@@ -1,13 +1,158 @@
 import { ChevronDown } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../../../../components/ui/button";
 import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
 
 export const HeroByAnima = () => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
 
+  useEffect(() => {
+    // Dot particle animation script
+    const canvas = document.getElementById(
+      "particle-canvas"
+    ) as HTMLCanvasElement;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles: Particle[] = [];
+    const particleCount = window.innerWidth < 768 ? 30 : 60; // Reduced particle count
+
+    // Mouse position tracking
+    let mouse = {
+      x: null as number | null,
+      y: null as number | null,
+      radius: 100, // Smaller interaction radius
+    };
+
+    window.addEventListener("mousemove", function (event) {
+      mouse.x = event.x;
+      mouse.y = event.y;
+    });
+
+    class Particle {
+      x: number;
+      y: number;
+      size: number;
+      baseSize: number;
+      speedX: number;
+      speedY: number;
+      density: number;
+      color: string;
+
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.baseSize = Math.random() * 1 + 0.5; // Smaller particles
+        this.size = this.baseSize;
+        this.speedX = Math.random() * 0.3 - 0.15; // Slower movement
+        this.speedY = Math.random() * 0.3 - 0.15;
+        this.density = Math.random() * 20 + 5; // Less density for weaker interaction
+        this.color = `rgba(255, 255, 255, ${Math.random() * 0.3 + 0.1})`; // More transparent
+      }
+
+      update() {
+        // Check for mouse interaction
+        if (mouse.x != null && mouse.y != null) {
+          let dx = mouse.x - this.x;
+          let dy = mouse.y - this.y;
+          let distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < mouse.radius) {
+            // More subtle repel effect
+            const forceDirectionX = dx / distance;
+            const forceDirectionY = dy / distance;
+            const force = (mouse.radius - distance) / mouse.radius;
+            const directionX = forceDirectionX * force * this.density * -0.3; // Reduced force
+            const directionY = forceDirectionY * force * this.density * -0.3;
+
+            this.x -= directionX;
+            this.y -= directionY;
+          }
+        }
+
+        // Normal movement
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        // Boundary check
+        if (this.x > canvas.width || this.x < 0) {
+          this.speedX = -this.speedX;
+        }
+        if (this.y > canvas.height || this.y < 0) {
+          this.speedY = -this.speedY;
+        }
+
+        // Very subtle size pulsing
+        this.size =
+          this.baseSize + Math.sin(Date.now() * 0.002 + this.density) * 0.2;
+      }
+
+      draw() {
+        if (!ctx) return; // Added null check for ctx
+
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        // More subtle glow
+        ctx.shadowBlur = 5;
+        ctx.shadowColor = "rgba(255, 255, 255, 0.1)";
+      }
+    }
+
+    function init() {
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      if (!ctx) return; // Added null check for ctx
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Reset shadow properties
+      ctx.shadowBlur = 0;
+
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Clear events on cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("mousemove", function () {});
+    };
+  }, []);
+
   return (
     <section className="relative w-full bg-black overflow-hidden">
+      {/* Particle canvas */}
+      <canvas
+        id="particle-canvas"
+        className="absolute top-0 left-0 w-full h-full"
+      />
+
       <div className="relative w-full min-h-[100vh] md:min-h-[800px] lg:min-h-[998px]">
         {/* Background gradient */}
         <div className="absolute inset-0 [background:radial-gradient(50%_50%_at_50%_0%,rgba(122,122,122,0.5)_0%,rgba(0,0,0,0)_100%)]">
@@ -79,7 +224,7 @@ export const HeroByAnima = () => {
           </div>
 
           {/* Learn more link */}
-          <div className="absolute w-[105px] h-[46px]  bottom-2 sm:top-[-70px] md:top-[934px] left-1/2 -translate-x-1/2 opacity-[0.81] flex flex-col items-center">
+          <div className="absolute w-[105px] h-[46px] bottom-2 sm:top-[-70px] md:top-[934px] left-1/2 -translate-x-1/2 opacity-[0.81] flex flex-col items-center">
             <span className="font-bold text-sm text-[#f3f3f3] [font-family:'Satoshi-Bold',Helvetica]">
               Learn more
             </span>

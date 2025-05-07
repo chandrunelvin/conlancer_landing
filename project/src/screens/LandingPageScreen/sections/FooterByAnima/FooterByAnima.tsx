@@ -18,7 +18,7 @@ export const FooterByAnima = (): JSX.Element => {
     {
       icon: "/icons8-instagram.svg",
       alt: "Instagram icon",
-      url: "https://instagram.com/yourhandlehttps://www.instagram.com/conlancer?igsh=d3ZoNXM4am5tc2V1&utm_source=qr",
+      url: "https://www.instagram.com/conlancer?igsh=d3ZoNXM4am5tc2V1&utm_source=qr",
     },
   ];
 

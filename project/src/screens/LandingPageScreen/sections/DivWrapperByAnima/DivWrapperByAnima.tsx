@@ -51,7 +51,7 @@ export const DivWrapperByAnima = (): JSX.Element => {
           </p>
         </div>
 
-        <div className="relative w-full h-[300px] md:h-[362px] rounded-[20px] overflow-hidden bg-gradient-to-b from-zinc-800 to-black">
+        <div className="relative w-full h-[100%] md:h-[362px] rounded-[20px] overflow-hidden bg-gradient-to-b from-zinc-800 to-black">
           <img className="" alt="Portal" src="/faq-image.png" />
         </div>
       </div>

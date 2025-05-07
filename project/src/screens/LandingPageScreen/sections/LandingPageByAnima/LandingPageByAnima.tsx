@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
+import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
 
 export const LandingPageByAnima = (): JSX.Element => {
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   return (
     <Card className="[background:radial-gradient(50%_50%_at_50%_0%,rgba(122,122,122,0.5)_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(17,17,17,1)_0%,rgba(17,17,17,1)_100%)] max-w-[1300px] w-full h-auto lg:h-[362px] rounded-[40px] overflow-hidden border-none">
       <CardContent className="flex flex-col lg:flex-row items-center p-6 lg:p-10 h-full relative gap-6 lg:gap-0">
@@ -33,7 +35,10 @@ export const LandingPageByAnima = (): JSX.Element => {
             </div>
 
             <div className="relative mx-auto lg:mx-0">
-              <Button className="h-[48px] lg:h-[54px] px-4 py-1.5 bg-zinc-950 rounded-full border-none">
+              <Button
+                className="h-[48px] lg:h-[54px] px-4 py-1.5 bg-zinc-950 rounded-full border-none"
+                onClick={() => setIsWaitlistOpen(true)}
+              >
                 <span className="font-bold text-white text-base lg:text-xl leading-6 whitespace-nowrap">
                   Get Early Access Now
                 </span>
@@ -50,6 +55,8 @@ export const LandingPageByAnima = (): JSX.Element => {
           />
         </div>
       </CardContent>
+      {/* Waitlist Form */}
+      <WaitlistForm open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen} />
     </Card>
   );
 };

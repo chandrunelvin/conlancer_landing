@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "../../../../components/ui/button";
 import { Separator } from "../../../../components/ui/separator";
+import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
 
 export const TimerByAnima = (): JSX.Element => {
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   // Set your target date/time here (e.g., 104 days from now)
   const targetDate = new Date();
   targetDate.setDate(targetDate.getDate() + 104);
@@ -85,12 +87,17 @@ export const TimerByAnima = (): JSX.Element => {
 
       <div className="relative w-[223px] h-[53px]">
         <div className="relative w-[212px] h-[54px] -top-px left-5">
-          <Button className="inline-flex h-[54px] items-center justify-center gap-2.5 px-4 py-1.5 absolute top-0 left-0 bg-zinc-950 rounded-[10043px] overflow-hidden border-[none] w-fit text-[#ffffff] text-xl text-center leading-6 whitespace-nowrap [font-family:'Satoshi-Bold',Helvetica] font-bold tracking-[0]">
+          <Button
+            className="inline-flex h-[54px] items-center justify-center gap-2.5 px-4 py-1.5 absolute top-0 left-0 bg-zinc-950 rounded-[10043px] overflow-hidden border-[none] w-fit text-[#ffffff] text-xl text-center leading-6 whitespace-nowrap [font-family:'Satoshi-Bold',Helvetica] font-bold tracking-[0]"
+            onClick={() => setIsWaitlistOpen(true)}
+          >
             Join the Waitlist
           </Button>
           <div className="absolute w-[174px] h-0.5 top-[52px] left-[38px] [background:linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(56,56,56,1)_50%,rgba(0,0,0,0)_100%)]" />
         </div>
       </div>
+      {/* Waitlist Form */}
+      <WaitlistForm open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen} />
     </section>
   );
 };

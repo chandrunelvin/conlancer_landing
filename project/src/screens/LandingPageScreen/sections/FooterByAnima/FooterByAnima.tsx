@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../../../components/ui/button";
+import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
 
 export const FooterByAnima = (): JSX.Element => {
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   const socialLinks = [
     {
       icon: "/icon-3.svg",
@@ -46,7 +48,10 @@ export const FooterByAnima = (): JSX.Element => {
           </p>
 
           <div className="w-full max-w-[240px]">
-            <Button className="w-full h-[54px] px-6 py-2 bg-zinc-950 rounded-full border-none">
+            <Button
+              className="w-full h-[54px] px-6 py-2 bg-zinc-950 rounded-full border-none"
+              onClick={() => setIsWaitlistOpen(true)}
+            >
               <span className="font-bold text-white text-xl leading-6 whitespace-nowrap font-['Satoshi-Bold',Helvetica]">
                 Get Early Access Now
               </span>
@@ -86,6 +91,8 @@ export const FooterByAnima = (): JSX.Element => {
           ))}
         </div>
       </div>
+      {/* Waitlist Form */}
+      <WaitlistForm open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen} />
     </footer>
   );
 };

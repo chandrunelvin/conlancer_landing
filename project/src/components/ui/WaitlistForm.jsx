@@ -28,7 +28,7 @@ export function WaitlistForm({ open, onOpenChange }) {
       formDataEncoded.append("profession", formData.profession); // Make sure spelling matches everywhere
 
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwaZuHdEju_ZakD_ykeP-NMWKzwbJgmXyC8DP0Ltu1JRHIHOeaSyPgbVTmvJ3ff7MzF/exec",
+        "https://script.google.com/macros/s/AKfycbzq4moEBRI8aPn8Q16icj2h7cyT31wFUXGnRM2SoW_AJIbuhQ_Qll1pdSKpxyTqZlk7/exec",
         {
           method: "POST",
           body: formDataEncoded,

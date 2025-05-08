@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./dialog";
 import { Button } from "./button";
+import toast from "react-hot-toast"; // ✅ import toast
 
 export function WaitlistForm({ open, onOpenChange }) {
   const [formData, setFormData] = useState({
@@ -27,8 +28,11 @@ export function WaitlistForm({ open, onOpenChange }) {
       formDataEncoded.append("city", formData.city);
       formDataEncoded.append("profession", formData.profession); // Make sure spelling matches everywhere
 
+      // const response = await fetch(
+      //   "https://script.google.com/macros/s/AKfycbzq4moEBRI8aPn8Q16icj2h7cyT31wFUXGnRM2SoW_AJIbuhQ_Qll1pdSKpxyTqZlk7/exec",
+      //   {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzq4moEBRI8aPn8Q16icj2h7cyT31wFUXGnRM2SoW_AJIbuhQ_Qll1pdSKpxyTqZlk7/exec",
+        "https://script.google.com/macros/s/AKfycbxmCQo19xyOPj9sLQUkSLTTPBGzq-vD1L1XSuaHRmaaiMSf-YI3KuiTYBeykHp21mtQGA/exec",
         {
           method: "POST",
           body: formDataEncoded,
@@ -38,7 +42,7 @@ export function WaitlistForm({ open, onOpenChange }) {
       );
 
       // Since you can't read response in no-cors mode, consider this alternative:
-      alert("Form submitted successfully!"); // Temporary success message
+      toast.success("Form submitted successfully!"); // ✅ success toast
       console.log("Form submitted, check Google Sheet for data");
 
       // Reset form
@@ -52,7 +56,7 @@ export function WaitlistForm({ open, onOpenChange }) {
       onOpenChange(false);
     } catch (err) {
       console.error("Submission error:", err);
-      alert("Error submitting form. Please check console for details.");
+      toast.error("Error submitting form. Please try again."); // ✅ error toast
     }
   };
 

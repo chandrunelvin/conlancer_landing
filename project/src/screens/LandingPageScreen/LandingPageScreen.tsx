@@ -14,6 +14,7 @@ import { LandingPageByAnima } from "./sections/LandingPageByAnima";
 import { LandingPageWrapperByAnima } from "./sections/LandingPageWrapperByAnima";
 import { TimerByAnima } from "./sections/TimerByAnima";
 import { TimerWrapperByAnima } from "./sections/TimerWrapperByAnima";
+import { Toaster } from "react-hot-toast";
 
 export const LandingPageScreen = (): JSX.Element => {
   // Navigation menu items
@@ -53,6 +54,7 @@ export const LandingPageScreen = (): JSX.Element => {
         <LandingPageWrapperByAnima />
         <DivWrapperByAnima />
         <FooterByAnima />
+        <Toaster position="top-center" />
       </div>
 
       <div className="relative w-28 h-28 self-start ml-[353px] mt-[-5518px] rotate-[-15deg] hidden sm:block">

@@ -224,11 +224,19 @@ export const HeroByAnima = () => {
           </div>
 
           {/* Learn more link */}
-          <div className="absolute w-[105px] h-[46px] bottom-2 sm:top-[-70px] md:top-[934px] left-1/2 -translate-x-1/2 opacity-[0.81] flex flex-col items-center">
+          <div
+            className="absolute w-[105px] h-[46px] bottom-2 sm:top-[-70px] md:top-[934px] left-1/2 -translate-x-1/2 opacity-[0.81] flex flex-col items-center cursor-pointer"
+            onClick={() => {
+              const nextSection = document.getElementById("next-section");
+              if (nextSection) {
+                nextSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
             <span className="font-bold text-sm text-[#f3f3f3] [font-family:'Satoshi-Bold',Helvetica]">
               Learn more
             </span>
-            <ChevronDown className="w-[18px] h-[18px] mt-1 text-white" />
+            <ChevronDown className="w-[18px] h-[18px] mt-1 text-white cursor-pointer" />
           </div>
         </div>
       </div>

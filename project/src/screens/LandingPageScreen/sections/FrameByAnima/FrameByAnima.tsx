@@ -27,7 +27,10 @@ export const FrameByAnima = (): JSX.Element => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-[35px] px-8 py-0 w-full">
+    <div
+      id="next-section"
+      className="flex flex-col items-center gap-[35px] px-8 py-0 w-full"
+    >
       <div className="flex flex-col items-center gap-2.5 w-full">
         <h2 className="w-full mt-[-1.00px] [font-family:'Satoshi-Bold',Helvetica] font-bold text-black text-[42px] text-center tracking-[0] leading-[normal]">
           Why Join Now ?

@@ -39,7 +39,10 @@ export const DivWrapperByAnima = (): JSX.Element => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row items-start justify-between max-w-[1440px] gap-12 px-4 md:px-8 py-12">
+    <div
+      className="flex flex-col md:flex-row items-start justify-between max-w-[1440px] gap-12 px-4 md:px-8 py-12"
+      id="faq"
+    >
       {/* Left Section */}
       <div className="flex flex-col w-full md:w-[563px] items-center md:items-start gap-8">
         <div className="flex flex-col gap-2.5 w-full">

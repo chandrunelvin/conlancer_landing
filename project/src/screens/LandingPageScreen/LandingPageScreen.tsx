@@ -20,7 +20,7 @@ export const LandingPageScreen = (): JSX.Element => {
   // Navigation menu items
   const navItems = [
     { label: "HOME", href: "#" },
-    { label: "ABOUT US", href: "#" },
+    { label: "FAQ", href: "#faq" },
   ];
 
   return (

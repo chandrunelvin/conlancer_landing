@@ -28,12 +28,12 @@ export function WaitlistForm({ open, onOpenChange }) {
       formDataEncoded.append("city", formData.city);
       formDataEncoded.append("profession", formData.profession); // Make sure spelling matches everywhere
 
-      // const response = await fetch(
-      //   "https://script.google.com/macros/s/AKfycbzq4moEBRI8aPn8Q16icj2h7cyT31wFUXGnRM2SoW_AJIbuhQ_Qll1pdSKpxyTqZlk7/exec",
-      //   {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxmCQo19xyOPj9sLQUkSLTTPBGzq-vD1L1XSuaHRmaaiMSf-YI3KuiTYBeykHp21mtQGA/exec",
+        "https://script.google.com/macros/s/AKfycbzq4moEBRI8aPn8Q16icj2h7cyT31wFUXGnRM2SoW_AJIbuhQ_Qll1pdSKpxyTqZlk7/exec",
         {
+          // const response = await fetch(
+          //   "https://script.google.com/macros/s/AKfycbxmCQo19xyOPj9sLQUkSLTTPBGzq-vD1L1XSuaHRmaaiMSf-YI3KuiTYBeykHp21mtQGA/exec",
+          //   {
           method: "POST",
           body: formDataEncoded,
           // Remove mode: "no-cors" to see actual errors

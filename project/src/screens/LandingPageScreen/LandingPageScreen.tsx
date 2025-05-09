@@ -15,7 +15,7 @@ import { LandingPageWrapperByAnima } from "./sections/LandingPageWrapperByAnima"
 import { TimerByAnima } from "./sections/TimerByAnima";
 import { TimerWrapperByAnima } from "./sections/TimerWrapperByAnima";
 import { Toaster } from "react-hot-toast";
-import { Menu, X } from "lucide-react"; // Import hamburger and close icons
+import { Menu, X } from "lucide-react";
 
 export const LandingPageScreen = (): JSX.Element => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -47,13 +47,15 @@ export const LandingPageScreen = (): JSX.Element => {
         </NavigationMenuList>
       </NavigationMenu>
 
-      {/* Mobile Hamburger Menu Button (visible on mobile) */}
-      <button
-        className="absolute top-[30px] right-[30px] z-20 md:hidden text-white"
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-      >
-        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
+      {/* Mobile Menu Toggle Button - Only shows when mobile menu is closed */}
+      {!mobileMenuOpen && (
+        <button
+          className="absolute top-[30px] right-[30px] z-20 md:hidden text-white"
+          onClick={() => setMobileMenuOpen(true)}
+        >
+          <Menu size={24} />
+        </button>
+      )}
 
       {/* Mobile Menu (visible when open) */}
       {mobileMenuOpen && (
@@ -70,6 +72,7 @@ export const LandingPageScreen = (): JSX.Element => {
               </a>
             ))}
           </div>
+          {/* Close button - Only shows when mobile menu is open */}
           <button
             className="absolute top-8 right-8 text-white"
             onClick={() => setMobileMenuOpen(false)}
@@ -79,6 +82,7 @@ export const LandingPageScreen = (): JSX.Element => {
         </div>
       )}
 
+      {/* Rest of your content */}
       <div className="flex flex-col w-full max-w-[100%] items-center justify-center gap-[100px]">
         <HeroByAnima />
         <FrameByAnima />

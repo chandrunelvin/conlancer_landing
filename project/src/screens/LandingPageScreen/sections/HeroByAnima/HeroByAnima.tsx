@@ -227,7 +227,7 @@ export const HeroByAnima = () => {
           <div
             className="absolute w-[105px] h-[46px] bottom-2 sm:top-[-70px] md:top-[934px] left-1/2 -translate-x-1/2 opacity-[0.81] flex flex-col items-center cursor-pointer"
             onClick={() => {
-              const nextSection = document.getElementById("next-section");
+              const nextSection = document.getElementById("aboutus");
               if (nextSection) {
                 nextSection.scrollIntoView({ behavior: "smooth" });
               }

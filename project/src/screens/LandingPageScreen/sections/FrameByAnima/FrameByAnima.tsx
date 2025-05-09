@@ -28,7 +28,7 @@ export const FrameByAnima = (): JSX.Element => {
 
   return (
     <div
-      id="next-section"
+      id="aboutus"
       className="flex flex-col items-center gap-[35px] px-8 py-0 w-full"
     >
       <div className="flex flex-col items-center gap-2.5 w-full">

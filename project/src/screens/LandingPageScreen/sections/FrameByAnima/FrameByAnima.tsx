@@ -56,7 +56,7 @@ export const FrameByAnima = (): JSX.Element => {
             />
 
             <CardContent className="p-0 flex flex-col gap-5 w-full">
-              <h3 className="self-stretch mt-[-1.00px] [font-family:'Satoshi-Bold',Helvetica] font-bold text-black text-[34px] tracking-[0] leading-10">
+              <h3 className="self-stretch mt-[-1.00px] [font-family:'Satoshi-Bold',Helvetica] font-bold text-black text-[28px] md:text-[34px] tracking-[0] leading-10">
                 {feature.title}
               </h3>
 

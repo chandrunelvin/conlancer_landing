@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "../../../../components/ui/button";
 import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
 
-export const FooterByAnima = (): JSX.Element => {
+export const FooterByConlancer = (): JSX.Element => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   const socialLinks = [
     {

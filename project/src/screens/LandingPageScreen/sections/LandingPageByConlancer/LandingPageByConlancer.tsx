@@ -3,7 +3,7 @@ import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
 
-export const LandingPageByAnima = (): JSX.Element => {
+export const LandingPageByConlancer = (): JSX.Element => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
 
   useEffect(() => {

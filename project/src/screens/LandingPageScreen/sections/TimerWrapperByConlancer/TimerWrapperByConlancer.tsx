@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TimerWrapperByAnima = (): JSX.Element => {
+export const TimerWrapperByConlancer = (): JSX.Element => {
   // Array of individual logo paths and sizes
   const partnerLogos = [
     { id: 1, src: "/client-logo.png", width: 154, height: 50 },

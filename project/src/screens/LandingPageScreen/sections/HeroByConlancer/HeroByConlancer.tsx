@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "../../../../components/ui/button";
 import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
 
-export const HeroByAnima = () => {
+export const HeroByConlancer = () => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
 
   useEffect(() => {

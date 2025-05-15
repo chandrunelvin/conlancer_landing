@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 
-export const FrameByAnima = (): JSX.Element => {
+export const FrameByConlancer = (): JSX.Element => {
   const features = [
     {
       title: "Zero Commission Forever",

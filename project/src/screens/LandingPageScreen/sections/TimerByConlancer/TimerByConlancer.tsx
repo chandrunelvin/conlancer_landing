@@ -3,7 +3,7 @@ import { Button } from "../../../../components/ui/button";
 import { Separator } from "../../../../components/ui/separator";
 import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
 
-export const TimerByAnima = (): JSX.Element => {
+export const TimerByConlancer = (): JSX.Element => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   // Set your target date/time here (e.g., 104 days from now)
   const targetDate = new Date();

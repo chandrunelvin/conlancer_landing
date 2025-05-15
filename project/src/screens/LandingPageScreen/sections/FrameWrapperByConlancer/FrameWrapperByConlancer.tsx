@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 
-export const FrameWrapperByAnima = (): JSX.Element => {
+export const FrameWrapperByConlancer = (): JSX.Element => {
   const [activeStep, setActiveStep] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
   const timelineRef = useRef<HTMLDivElement>(null);

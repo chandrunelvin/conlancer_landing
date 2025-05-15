@@ -3,7 +3,7 @@ import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
 
-export const LandingPageWrapperByAnima = (): JSX.Element => {
+export const LandingPageWrapperByConlancer = (): JSX.Element => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   return (
     <Card className="border-2 border-solid border-[#e2e2e2] [background:linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(245,245,245,1)_100%)] flex w-full max-w-[1300px] h-auto min-h-[362px] items-center gap-2.5 p-10 relative rounded-[40px] overflow-hidden">

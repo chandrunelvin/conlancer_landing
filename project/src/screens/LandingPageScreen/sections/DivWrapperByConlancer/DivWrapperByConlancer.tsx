@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "../../../../components/ui/accordion";
 
-export const DivWrapperByAnima = (): JSX.Element => {
+export const DivWrapperByConlancer = (): JSX.Element => {
   const [openItem, setOpenItem] = useState("item-3");
 
   const faqItems = [

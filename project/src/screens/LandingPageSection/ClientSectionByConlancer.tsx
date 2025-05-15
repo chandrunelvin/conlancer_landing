@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TimerWrapperByConlancer = (): JSX.Element => {
+export const ClientSectionByConlancer = (): JSX.Element => {
   // Array of individual logo paths and sizes
   const partnerLogos = [
     { id: 1, src: "/client-logo.png", width: 154, height: 50 },
@@ -43,3 +43,5 @@ export const TimerWrapperByConlancer = (): JSX.Element => {
     </section>
   );
 };
+
+export default ClientSectionByConlancer;

@@ -1,1 +1,0 @@
-export { LandingPageWrapperByConlancer } from "./LandingPageWrapperByConlancer";

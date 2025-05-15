@@ -1,1 +1,0 @@
-export { FrameByConlancer } from "./FrameByConlancer";

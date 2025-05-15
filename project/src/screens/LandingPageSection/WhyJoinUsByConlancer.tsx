@@ -1,7 +1,7 @@
 import React from "react";
-import { Card, CardContent } from "../../../../components/ui/card";
+import { Card, CardContent } from "../../components/ui/card";
 
-export const FrameByConlancer = (): JSX.Element => {
+export const WhyJoinUsByConlancer = (): JSX.Element => {
   const features = [
     {
       title: "Zero Commission Forever",
@@ -153,3 +153,5 @@ export const FrameByConlancer = (): JSX.Element => {
     </div>
   );
 };
+
+export default WhyJoinUsByConlancer;

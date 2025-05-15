@@ -1,1 +1,0 @@
-export { LandingPageByConlancer } from "./LandingPageByConlancer";

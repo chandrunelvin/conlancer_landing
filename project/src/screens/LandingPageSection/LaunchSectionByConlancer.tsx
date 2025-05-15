@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "../../../../components/ui/button";
-import { Card, CardContent } from "../../../../components/ui/card";
-import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
+import { Button } from "../../components/ui/button";
+import { Card, CardContent } from "../../components/ui/card";
+import { WaitlistForm } from "../../components/ui/WaitlistForm";
 
-export const LandingPageByConlancer = (): JSX.Element => {
+export const LaunchSectionByConlancer = (): JSX.Element => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
 
   useEffect(() => {
@@ -216,3 +216,5 @@ export const LandingPageByConlancer = (): JSX.Element => {
     </Card>
   );
 };
+
+export default LaunchSectionByConlancer;

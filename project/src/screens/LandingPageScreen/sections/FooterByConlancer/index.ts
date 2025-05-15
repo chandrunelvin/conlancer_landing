@@ -1,1 +1,0 @@
-export { FooterByConlancer } from "./FooterByConlancer";

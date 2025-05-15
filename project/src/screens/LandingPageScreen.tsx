@@ -4,28 +4,20 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "../../components/ui/navigation-menu";
-// import { DivWrapperByConlancer } from "../sections/DivWrapperByConlancer";
+} from "../components/ui/navigation-menu";
 
-// import { FooterByConlancer } from "./sections/FooterByConlancer";
-// import { FrameByConlancer } from "./sections/FrameByConlancer";
-// import { FrameWrapperByConlancer } from "./sections/FrameWrapperByConlancer";
-// import { HeroByConlancer } from "./sections/HeroByConlancer";
-// import { LandingPageByConlancer } from "./sections/LandingPageByConlancer";
-// import { LandingPageWrapperByConlancer } from "./sections/LandingPageWrapperByConlancer";
-// import { TimerByConlancer } from "./sections/TimerByConlancer";
-// import { TimerWrapperByConlancer } from "./sections/TimerWrapperByConlancer";
 import { Toaster } from "react-hot-toast";
 import { Menu, X } from "lucide-react";
-import { HeroByConlancer } from "./sections/HeroByConlancer/HeroByConlancer";
-import { FrameByConlancer } from "./sections/FrameByConlancer/FrameByConlancer";
-import { FrameWrapperByConlancer } from "./sections/FrameWrapperByConlancer/FrameWrapperByConlancer";
-import { TimerByConlancer } from "./sections/TimerByConlancer/TimerByConlancer";
-import { TimerWrapperByConlancer } from "./sections/TimerWrapperByConlancer/TimerWrapperByConlancer";
-import { LandingPageByConlancer } from "./sections/LandingPageByConlancer/LandingPageByConlancer";
-import { DivWrapperByConlancer } from "./sections/DivWrapperByConlancer";
-import { LandingPageWrapperByConlancer } from "./sections/LandingPageWrapperByConlancer/LandingPageWrapperByConlancer";
-import { FooterByConlancer } from "./sections/FooterByConlancer/FooterByConlancer";
+import HeroByConlancer from "./LandingPageSection/HeroByConlancer";
+import WhyJoinUsByConlancer from "./LandingPageSection/WhyJoinUsByConlancer";
+import FrameWrapperByConlancer from "./LandingPageSection/FrameWrapperByConlancer";
+import TimerByConlancer from "./LandingPageSection/TimerByConlancer";
+import ClientSectionByConlancer from "./LandingPageSection/ClientSectionByConlancer";
+import LaunchSectionByConlancer from "./LandingPageSection/LaunchSectionByConlancer";
+// import { DivWrapperByConlancer } from "./sections/DivWrapperByConlancer";
+import DivWrapperByConlancer from "./LandingPageSection/DivWrapperByConlancer";
+import SpecialLaunchSectionByConlancer from "./LandingPageSection/SpecialLaunchSectionByConlancer";
+import FooterByConlancer from "./LandingPageSection/FooterByConlancer";
 
 export const LandingPageScreen = (): JSX.Element => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -94,22 +86,13 @@ export const LandingPageScreen = (): JSX.Element => {
 
       {/* Rest of your content */}
       <div className="flex flex-col w-full max-w-[100%] items-center justify-center gap-[100px]">
-        {/* <HeroByConlancer />
-        <FrameByConlancer />
-        <FrameWrapperByConlancer />
-        <TimerByConlancer />
-        <TimerWrapperByConlancer />
-        <LandingPageByConlancer />
-        <LandingPageWrapperByConlancer />
-        <DivWrapperByConlancer />
-        <FooterByConlancer /> */}
         <HeroByConlancer />
-        <FrameByConlancer />
+        <WhyJoinUsByConlancer />
         <FrameWrapperByConlancer />
         <TimerByConlancer />
-        <TimerWrapperByConlancer />
-        <LandingPageByConlancer />
-        <LandingPageWrapperByConlancer />
+        <ClientSectionByConlancer />
+        <LaunchSectionByConlancer />
+        <SpecialLaunchSectionByConlancer />
         <DivWrapperByConlancer />
         <FooterByConlancer />
         <Toaster position="top-center" />
@@ -125,3 +108,5 @@ export const LandingPageScreen = (): JSX.Element => {
     </div>
   );
 };
+
+// export default LandingPageByConlancer;

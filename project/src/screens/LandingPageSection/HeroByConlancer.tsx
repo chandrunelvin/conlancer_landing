@@ -1,7 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import React, { useState, useEffect } from "react";
-import { Button } from "../../../../components/ui/button";
-import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
+import { Button } from "../../components/ui/button";
+import { WaitlistForm } from "../../components/ui/WaitlistForm";
 
 export const HeroByConlancer = () => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
@@ -245,3 +245,5 @@ export const HeroByConlancer = () => {
     </section>
   );
 };
+
+export default HeroByConlancer;

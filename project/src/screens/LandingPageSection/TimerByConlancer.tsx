@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "../../../../components/ui/button";
-import { Separator } from "../../../../components/ui/separator";
-import { WaitlistForm } from "../../../../components/ui/WaitlistForm";
+import { Button } from "../../components/ui/button";
+import { Separator } from "../../components/ui/separator";
+import { WaitlistForm } from "../../components/ui/WaitlistForm";
 
 export const TimerByConlancer = (): JSX.Element => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
@@ -262,3 +262,5 @@ export const TimerByConlancer = (): JSX.Element => {
     </section>
   );
 };
+
+export default TimerByConlancer;

@@ -1,11 +1,12 @@
 import { MinusIcon, PlusIcon } from "lucide-react";
 import React, { useState } from "react";
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../../../components/ui/accordion";
+} from "../../components/ui/accordion";
 
 export const DivWrapperByConlancer = (): JSX.Element => {
   const [openItem, setOpenItem] = useState("item-3");
@@ -112,3 +113,5 @@ export const DivWrapperByConlancer = (): JSX.Element => {
     </div>
   );
 };
+
+export default DivWrapperByConlancer;

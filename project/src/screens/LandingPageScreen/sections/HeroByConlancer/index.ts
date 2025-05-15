@@ -1,1 +1,0 @@
-export { HeroByConlancer } from "./HeroByConlancer";

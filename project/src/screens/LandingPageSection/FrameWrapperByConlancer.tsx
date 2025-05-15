@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Card, CardContent } from "../../../../components/ui/card";
+import { Card, CardContent } from "../../components/ui/card";
 
 export const FrameWrapperByConlancer = (): JSX.Element => {
   const [activeStep, setActiveStep] = useState(0);
@@ -192,3 +192,5 @@ export const FrameWrapperByConlancer = (): JSX.Element => {
     </section>
   );
 };
+
+export default FrameWrapperByConlancer;

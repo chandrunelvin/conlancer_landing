@@ -19,7 +19,7 @@ import DivWrapperByConlancer from "./LandingPageSection/DivWrapperByConlancer";
 import SpecialLaunchSectionByConlancer from "./LandingPageSection/SpecialLaunchSectionByConlancer";
 import FooterByConlancer from "./LandingPageSection/FooterByConlancer";
 
-export const LandingPageScreen = (): JSX.Element => {
+export const Conlancer_Website = (): JSX.Element => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Navigation menu items

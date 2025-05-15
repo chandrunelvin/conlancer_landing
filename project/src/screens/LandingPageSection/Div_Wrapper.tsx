@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from "../../components/ui/accordion";
 
-export const DivWrapperByConlancer = (): JSX.Element => {
+export const Div_Wrapper = (): JSX.Element => {
   const [openItem, setOpenItem] = useState("item-3");
 
   const faqItems = [
@@ -114,4 +114,4 @@ export const DivWrapperByConlancer = (): JSX.Element => {
   );
 };
 
-export default DivWrapperByConlancer;
+export default Div_Wrapper;

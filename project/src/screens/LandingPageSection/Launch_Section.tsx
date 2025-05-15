@@ -3,7 +3,7 @@ import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { WaitlistForm } from "../../components/ui/WaitlistForm";
 
-export const LaunchSectionByConlancer = (): JSX.Element => {
+export const Launch_Section = (): JSX.Element => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
 
   useEffect(() => {
@@ -217,4 +217,4 @@ export const LaunchSectionByConlancer = (): JSX.Element => {
   );
 };
 
-export default LaunchSectionByConlancer;
+export default Launch_Section;

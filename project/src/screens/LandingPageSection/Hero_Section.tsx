@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "../../components/ui/button";
 import { WaitlistForm } from "../../components/ui/WaitlistForm";
 
-export const HeroByConlancer = () => {
+export const Hero_Section = () => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
 
   useEffect(() => {
@@ -246,4 +246,4 @@ export const HeroByConlancer = () => {
   );
 };
 
-export default HeroByConlancer;
+export default Hero_Section;

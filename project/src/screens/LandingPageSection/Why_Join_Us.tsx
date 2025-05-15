@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardContent } from "../../components/ui/card";
 
-export const WhyJoinUsByConlancer = (): JSX.Element => {
+export const Why_Join_Us = (): JSX.Element => {
   const features = [
     {
       title: "Zero Commission Forever",
@@ -78,12 +78,7 @@ export const WhyJoinUsByConlancer = (): JSX.Element => {
               {index === 0 && (
                 <div className="h-[670px]">
                   <div className="relative w-[309px] h-[649px]">
-                    <div className="absolute w-[289px] h-[629px] top-[21px] left-5 bg-[#ffffff] rounded-[40px] overflow-hidden">
-                      {/* <img
-                        className="w-[268px] h-[337px] top-0 left-0 absolute object-cover"
-                        alt="Placeholder image"
-                      /> */}
-                    </div>
+                    <div className="absolute w-[289px] h-[629px] top-[21px] left-5 bg-[#ffffff] rounded-[40px] overflow-hidden"></div>
                     <img
                       className="w-[289px] h-[358px] top-0 left-0 absolute object-cover"
                       src="./iPhone-Mockup.png"
@@ -154,4 +149,4 @@ export const WhyJoinUsByConlancer = (): JSX.Element => {
   );
 };
 
-export default WhyJoinUsByConlancer;
+export default Why_Join_Us;

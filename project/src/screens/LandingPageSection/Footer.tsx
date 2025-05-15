@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "../../components/ui/button";
 import { WaitlistForm } from "../../components/ui/WaitlistForm";
 
-export const FooterByConlancer = (): JSX.Element => {
+export const Footer = (): JSX.Element => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   const socialLinks = [
     {
@@ -258,4 +258,4 @@ export const FooterByConlancer = (): JSX.Element => {
   );
 };
 
-export default FooterByConlancer;
+export default Footer;

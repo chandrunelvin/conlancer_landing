@@ -8,16 +8,15 @@ import {
 
 import { Toaster } from "react-hot-toast";
 import { Menu, X } from "lucide-react";
-import HeroByConlancer from "./LandingPageSection/HeroByConlancer";
-import WhyJoinUsByConlancer from "./LandingPageSection/WhyJoinUsByConlancer";
-import FrameWrapperByConlancer from "./LandingPageSection/FrameWrapperByConlancer";
-import TimerByConlancer from "./LandingPageSection/TimerByConlancer";
-import ClientSectionByConlancer from "./LandingPageSection/ClientSectionByConlancer";
-import LaunchSectionByConlancer from "./LandingPageSection/LaunchSectionByConlancer";
-// import { DivWrapperByConlancer } from "./sections/DivWrapperByConlancer";
-import DivWrapperByConlancer from "./LandingPageSection/DivWrapperByConlancer";
-import SpecialLaunchSectionByConlancer from "./LandingPageSection/SpecialLaunchSectionByConlancer";
-import FooterByConlancer from "./LandingPageSection/FooterByConlancer";
+import Hero_Section from "./LandingPageSection/Hero_Section";
+import Why_Join_Us from "./LandingPageSection/Why_Join_Us";
+import Frame_Wrapper from "./LandingPageSection/Frame_Wrapper";
+import Timer_Section from "./LandingPageSection/Timer_Section";
+import ClientSectionByConlancer from "./LandingPageSection/ClientSection";
+import Launch_Section from "./LandingPageSection/Launch_Section";
+import Div_Wrapper from "./LandingPageSection/Div_Wrapper";
+import Special_Launch_Section from "./LandingPageSection/Special_Launch_Section";
+import Footer from "./LandingPageSection/Footer";
 
 export const Conlancer_Website = (): JSX.Element => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -86,15 +85,15 @@ export const Conlancer_Website = (): JSX.Element => {
 
       {/* Rest of your content */}
       <div className="flex flex-col w-full max-w-[100%] items-center justify-center gap-[100px]">
-        <HeroByConlancer />
-        <WhyJoinUsByConlancer />
-        <FrameWrapperByConlancer />
-        <TimerByConlancer />
+        <Hero_Section />
+        <Why_Join_Us />
+        <Frame_Wrapper />
+        <Timer_Section />
         <ClientSectionByConlancer />
-        <LaunchSectionByConlancer />
-        <SpecialLaunchSectionByConlancer />
-        <DivWrapperByConlancer />
-        <FooterByConlancer />
+        <Launch_Section />
+        <Special_Launch_Section />
+        <Div_Wrapper />
+        <Footer />
         <Toaster position="top-center" />
       </div>
 
@@ -108,5 +107,3 @@ export const Conlancer_Website = (): JSX.Element => {
     </div>
   );
 };
-
-// export default LandingPageByConlancer;
